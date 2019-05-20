@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate Email</title>
+</head>
+<body>
+    <script>
+        function isEmail(str) {
+            let regexp = /^[A-Za-z][a-zA-Z0-9]*@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
+            if (regexp.test(str)) {
+                console.log(str + " Dung dinh dang Email");
+                return isEmail;
+            }
+            console.log(str + " Sai dinh dang Email");
+            return isEmail;
+        }
+
+        isEmail("a@gmail.com");
+        isEmail("ab@yahoo.com");
+        isEmail("abc@hotmail.com");
+        isEmail("@gmail.com");
+        isEmail("ab@gmail.");
+        isEmail("@#abc@gmail.com");
+    </script>
+</body>
+</html>
