@@ -11,20 +11,15 @@
     <script>
         function isEmail(str) {
             let regexp = /^[A-Za-z][a-zA-Z0-9]*@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
-            if (regexp.test(str)) {
-                console.log(str + " Dung dinh dang Email");
-                return isEmail;
-            }
-            console.log(str + " Sai dinh dang Email");
-            return isEmail;
+            return regexp.test(str);
         }
 
-        isEmail("a@gmail.com");
-        isEmail("ab@yahoo.com");
-        isEmail("abc@hotmail.com");
-        isEmail("@gmail.com");
-        isEmail("ab@gmail.");
-        isEmail("@#abc@gmail.com");
+        console.log(isEmail("a@gmail.com"));
+        console.log(isEmail("ab@yahoo.com"));
+        console.log(isEmail("abc@hotmail.com"));
+        console.log(isEmail("@gmail.com"));
+        console.log(isEmail("ab@gmail."));
+        console.log(isEmail("@#abc@gmail.com"));
     </script>
 </body>
 </html>
